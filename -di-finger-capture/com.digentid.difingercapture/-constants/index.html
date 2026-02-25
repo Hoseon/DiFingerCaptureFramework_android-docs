@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Constants</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            DiFingerCapture
+                    </a>
+            </div>
+            <div class="library-version">
+1.0.0            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="DiFingerCapture::com.digentid.difingercapture/Constants///PointingToDeclaration//492899073">
+  <div class="breadcrumbs"><a href="../../../index.html">DiFingerCapture</a><span class="delimiter">/</span><a href="../index.html">com.digentid.difingercapture</a><span class="delimiter">/</span><span class="current">Constants</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Constants</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Constants</a></div><p class="paragraph">DiFingerCapture SDK 전역 상수 모음.</p><p class="paragraph">이미지 처리 파라미터, ML 모델 경로, 파일명 등 SDK 내부에서 공통으로 사용하는 값들을 정의합니다.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1153402727%2FProperties%2F492899073" anchor-label="CAMERA_SESSION_EXPIRED_TIME" id="1153402727%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-m-e-r-a_-s-e-s-s-i-o-n_-e-x-p-i-r-e-d_-t-i-m-e.html"><span><span>CAMERA_SESSION_EXPIRED_TIME</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1153402727%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-c-a-m-e-r-a_-s-e-s-s-i-o-n_-e-x-p-i-r-e-d_-t-i-m-e.html">CAMERA_SESSION_EXPIRED_TIME</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">카메라 세션 자동 만료 시간 (밀리초). 기본값: 60초</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1309045685%2FProperties%2F492899073" anchor-label="CARD1_TOTAL_ROUNDS" id="-1309045685%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-r-d1_-t-o-t-a-l_-r-o-u-n-d-s.html"><span><span>CARD1_TOTAL_ROUNDS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309045685%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-c-a-r-d1_-t-o-t-a-l_-r-o-u-n-d-s.html">CARD1_TOTAL_ROUNDS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div><div class="brief "><p class="paragraph">카드A(등록) 촬영 라운드 수</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2063238028%2FProperties%2F492899073" anchor-label="CARD2_TOTAL_ROUNDS" id="2063238028%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-r-d2_-t-o-t-a-l_-r-o-u-n-d-s.html"><span><span>CARD2_TOTAL_ROUNDS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2063238028%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-c-a-r-d2_-t-o-t-a-l_-r-o-u-n-d-s.html">CARD2_TOTAL_ROUNDS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div><div class="brief "><p class="paragraph">카드B(확인) 촬영 라운드 수</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1593605234%2FProperties%2F492899073" anchor-label="EXTRACT_DPI" id="1593605234%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-x-t-r-a-c-t_-d-p-i.html"><span><span>EXTRACT_DPI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1593605234%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-e-x-t-r-a-c-t_-d-p-i.html">EXTRACT_DPI</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">500</span></div><div class="brief "><p class="paragraph">IzzixFCI 특징점 추출 시 사용하는 DPI 값</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-673760790%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R1_OVERLAY" id="-673760790%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r1_-o-v-e-r-l-a-y.html"><span><span>FILE_NAME_A_R1_OVERLAY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-673760790%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r1_-o-v-e-r-l-a-y.html">FILE_NAME_A_R1_OVERLAY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 1라운드 오버레이 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-488848020%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R1_PROCESSED" id="-488848020%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r1_-p-r-o-c-e-s-s-e-d.html"><span><span>FILE_NAME_A_R1_PROCESSED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488848020%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r1_-p-r-o-c-e-s-s-e-d.html">FILE_NAME_A_R1_PROCESSED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 1라운드 처리된 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="351731209%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R2_OVERLAY" id="351731209%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r2_-o-v-e-r-l-a-y.html"><span><span>FILE_NAME_A_R2_OVERLAY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="351731209%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r2_-o-v-e-r-l-a-y.html">FILE_NAME_A_R2_OVERLAY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 2라운드 오버레이 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1461452235%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R2_PROCESSED" id="1461452235%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r2_-p-r-o-c-e-s-s-e-d.html"><span><span>FILE_NAME_A_R2_PROCESSED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1461452235%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r2_-p-r-o-c-e-s-s-e-d.html">FILE_NAME_A_R2_PROCESSED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 2라운드 처리된 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1377223208%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R3_OVERLAY" id="1377223208%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r3_-o-v-e-r-l-a-y.html"><span><span>FILE_NAME_A_R3_OVERLAY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1377223208%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r3_-o-v-e-r-l-a-y.html">FILE_NAME_A_R3_OVERLAY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 3라운드 오버레이 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-883214806%2FProperties%2F492899073" anchor-label="FILE_NAME_A_R3_PROCESSED" id="-883214806%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-a_-r3_-p-r-o-c-e-s-s-e-d.html"><span><span>FILE_NAME_A_R3_PROCESSED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-883214806%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-a_-r3_-p-r-o-c-e-s-s-e-d.html">FILE_NAME_A_R3_PROCESSED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드A(등록) 3라운드 처리된 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1761413263%2FProperties%2F492899073" anchor-label="FILE_NAME_B_OVERLAY" id="1761413263%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-b_-o-v-e-r-l-a-y.html"><span><span>FILE_NAME_B_OVERLAY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1761413263%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-b_-o-v-e-r-l-a-y.html">FILE_NAME_B_OVERLAY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드B(확인) 오버레이 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1043759407%2FProperties%2F492899073" anchor-label="FILE_NAME_B_PROCESSED" id="-1043759407%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-n-a-m-e_-b_-p-r-o-c-e-s-s-e-d.html"><span><span>FILE_NAME_B_PROCESSED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1043759407%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-i-l-e_-n-a-m-e_-b_-p-r-o-c-e-s-s-e-d.html">FILE_NAME_B_PROCESSED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">카드B(확인) 처리된 이미지가 저장되는 내부 파일명</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="639357089%2FProperties%2F492899073" anchor-label="LABEL_FINGER_PATH" id="639357089%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-b-e-l_-f-i-n-g-e-r_-p-a-t-h.html"><span><span>LABEL_FINGER_PATH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="639357089%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-l-a-b-e-l_-f-i-n-g-e-r_-p-a-t-h.html">LABEL_FINGER_PATH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">손가락 감지 모델 레이블 파일 경로 (assets/ 기준)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="119799200%2FProperties%2F492899073" anchor-label="LABELS_ANGLE_PATH" id="119799200%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-b-e-l-s_-a-n-g-l-e_-p-a-t-h.html"><span><span>LABELS_ANGLE_PATH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="119799200%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-l-a-b-e-l-s_-a-n-g-l-e_-p-a-t-h.html">LABELS_ANGLE_PATH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">손가락 각도 감지 모델 레이블 파일 경로 (assets/ 기준)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1380956752%2FProperties%2F492899073" anchor-label="MIN_MINUTIAE_COUNT" id="1380956752%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-i-n_-m-i-n-u-t-i-a-e_-c-o-u-n-t.html"><span><span>MIN_MINUTIAE_COUNT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1380956752%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-m-i-n_-m-i-n-u-t-i-a-e_-c-o-u-n-t.html">MIN_MINUTIAE_COUNT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4</span></div><div class="brief "><p class="paragraph">촬영 성공으로 인정되는 최소 특징점 개수. 이 값 미만이면 재촬영</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1327028333%2FProperties%2F492899073" anchor-label="PROCESSED_IMAGE_HEIGHT" id="1327028333%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-c-e-s-s-e-d_-i-m-a-g-e_-h-e-i-g-h-t.html"><span><span>PROCESSED_IMAGE_HEIGHT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1327028333%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-c-e-s-s-e-d_-i-m-a-g-e_-h-e-i-g-h-t.html">PROCESSED_IMAGE_HEIGHT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">360</span></div><div class="brief "><p class="paragraph">IzzixFCI 엔진에 전달하는 처리된 이미지 크기 (픽셀). iOS processFingerImage와 동일한 파라미터</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="114436608%2FProperties%2F492899073" anchor-label="PROCESSED_IMAGE_WIDTH" id="114436608%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-c-e-s-s-e-d_-i-m-a-g-e_-w-i-d-t-h.html"><span><span>PROCESSED_IMAGE_WIDTH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="114436608%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-c-e-s-s-e-d_-i-m-a-g-e_-w-i-d-t-h.html">PROCESSED_IMAGE_WIDTH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">256</span></div><div class="brief "><p class="paragraph">IzzixFCI 엔진에 전달하는 처리된 이미지 크기 (픽셀). iOS processFingerImage와 동일한 파라미터</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1245548397%2FProperties%2F492899073" anchor-label="TF_ANGLE_PATH" id="-1245548397%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-f_-a-n-g-l-e_-p-a-t-h.html"><span><span>TF_ANGLE_PATH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1245548397%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-t-f_-a-n-g-l-e_-p-a-t-h.html">TF_ANGLE_PATH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">손가락 각도 감지 TFLite 모델 파일 경로 (assets/ 기준)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1068408357%2FProperties%2F492899073" anchor-label="TF_FINGER_PATH" id="-1068408357%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-f_-f-i-n-g-e-r_-p-a-t-h.html"><span><span>TF_FINGER_PATH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1068408357%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-t-f_-f-i-n-g-e-r_-p-a-t-h.html">TF_FINGER_PATH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">손가락 감지 YOLOv8 TFLite 모델 파일 경로 (assets/ 기준)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
