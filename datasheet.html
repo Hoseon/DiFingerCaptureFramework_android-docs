@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myFinger SDK — 기술 명세서</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --primary: #1a1a2e;
+    --accent: #0066cc;
+    --accent-light: #e8f0ff;
+    --border: #d0d7de;
+    --text: #24292f;
+    --text-muted: #57606a;
+    --bg: #ffffff;
+    --bg-code: #f6f8fa;
+    --success: #1a7f37;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    font-size: 10pt;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 48px;
+  }
+
+  /* Cover Header */
+  .cover {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  .cover .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .cover h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .cover .subtitle {
+    font-size: 12pt;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background: var(--bg-code);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+
+  .meta-item .label {
+    font-size: 7.5pt;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .meta-item .value {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* Sections */
+  h2 {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    color: white;
+    font-size: 9pt;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 24px 0 10px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 9pt;
+  }
+
+  thead tr {
+    background: var(--primary);
+    color: white;
+  }
+
+  thead th {
+    padding: 9px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8.5pt;
+    letter-spacing: 0.04em;
+  }
+
+  tbody tr:nth-child(even) { background: var(--bg-code); }
+  tbody tr:hover { background: var(--accent-light); }
+
+  tbody td {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tbody td:first-child { font-weight: 500; color: var(--primary); }
+
+  /* Code blocks */
+  pre {
+    background: var(--primary);
+    color: #e6edf3;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin: 12px 0 20px;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 8.5pt;
+    background: var(--bg-code);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #cf222e;
+  }
+
+  pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* Callout / Note */
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: var(--accent-light);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin: 12px 0;
+    font-size: 9pt;
+    color: #0550ae;
+  }
+
+  /* Architecture diagram */
+  .arch-box {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+
+  .arch-box pre {
+    background: none;
+    color: var(--text);
+    padding: 0;
+    font-size: 8.5pt;
+  }
+
+  /* Highlight row */
+  .highlight-row td { background: #fff8e1 !important; font-weight: 600; }
+
+  /* Footer */
+  .footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 8pt;
+  }
+
+  .footer .brand { font-weight: 700; color: var(--primary); }
+
+  /* Print */
+  @media print {
+    body { padding: 20px 32px; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+    pre { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="badge">Technical Datasheet</div>
+  <h1>myFinger SDK</h1>
+  <p class="subtitle">카메라 기반 지문 인증 SDK — iOS &amp; Android</p>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="label">Version</div>
+      <div class="value">1.4.0</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">공급사</div>
+      <div class="value">DiGentID</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">문서 분류</div>
+      <div class="value">대외 공개</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">최종 수정</div>
+      <div class="value">2026-04-01</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 1 -->
+<h2><span class="num">1</span> 제품 개요</h2>
+
+<p>
+myFinger SDK는 스마트폰 후면 카메라만으로 지문 인증을 구현하는 모바일 SDK입니다.
+별도 지문 센서(하드웨어) 없이 iOS · Android 앱에 통합할 수 있으며,
+생체 데이터 처리는 <strong>기기 내부</strong>에서 완결됩니다.
+</p>
+
+<table>
+  <thead>
+    <tr><th>특징</th><th>설명</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>카메라 기반 지문 인식</td><td>일반 후면 카메라로 지문 촬영 및 특징점 추출</td></tr>
+    <tr><td>온디바이스 처리</td><td>지문 원본 이미지 및 특징점이 기기 외부로 전송되지 않음</td></tr>
+    <tr><td>크로스 플랫폼</td><td>iOS (Swift), Android (Kotlin) 동일한 API 구조 제공</td></tr>
+    <tr><td>라이선스 기반</td><td>키 발급 후 앱에서 초기화, 만료 기반 접근 제어</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 2 -->
+<h2><span class="num">2</span> 기술 사양</h2>
+
+<h3>2.1 플랫폼 지원</h3>
+<table>
+  <thead>
+    <tr><th>플랫폼</th><th>최소 버전</th><th>개발 언어</th><th>배포 형태</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>iOS</td><td>iOS 17.0</td><td>Swift 5.9+</td><td>XCFramework</td></tr>
+    <tr><td>Android</td><td>API 26 (Android 8.0)</td><td>Kotlin 1.9+</td><td>AAR</td></tr>
+  </tbody>
+</table>
+<blockquote>iOS: arm64 실기기 전용. 시뮬레이터 미지원.</blockquote>
+
+<h3>2.2 성능 지표</h3>
+<table>
+  <thead>
+    <tr><th>항목</th><th>수치</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>특징점 추출 속도</td><td>~70ms (실기기 기준)</td></tr>
+    <tr><td>최소 특징점 개수</td><td>6개 이상 (인증 신뢰도 보장 기준)</td></tr>
+    <tr><td>권장 품질 점수</td><td>40점 이상 (0–100 스케일)</td></tr>
+    <tr><td>인증 세션 유효시간</td><td>5분</td></tr>
+  </tbody>
+</table>
+
+<h3>2.3 특징점 데이터 규격</h3>
+<table>
+  <thead>
+    <tr><th>항목</th><th>규격</th></tr>
+  </thead>
+  <tbody>
+    <tr class="highlight-row"><td>버퍼 크기</td><td>4,096 바이트 고정</td></tr>
+    <tr><td>데이터 형식</td><td>바이너리 (플랫폼 비종속)</td></tr>
+    <tr><td>원본 이미지 포함 여부</td><td>포함되지 않음</td></tr>
+    <tr><td>역변환(지문 복원) 가능 여부</td><td>불가</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 3 -->
+<h2><span class="num">3</span> 보안 설계</h2>
+
+<h3>3.1 온디바이스 처리 원칙</h3>
+
+<div class="arch-box">
+<pre>
+[카메라 촬영]
+     ↓
+[기기 내: 이미지 처리 → 특징점 추출 → 로컬 매칭]
+     ↓
+[결과(true/false)만 앱으로 반환]
+
+※ 지문 이미지 및 특징점 원본은 기기 외부로 전송되지 않습니다.
+</pre>
+</div>
+
+<h3>3.2 특징점 저장 권고사항</h3>
+<p>SDK는 특징점 추출 결과를 앱에 반환합니다. 생체정보는 민감 개인정보이므로 저장 방식에 따라 아래 기준을 준수하시기 바랍니다.</p>
+<table>
+  <thead>
+    <tr><th>사용 시나리오</th><th>권고 조치</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>인메모리 임시 매칭</strong> (저장 없음)</td><td>별도 암호화 불필요 — 매칭 후 즉시 메모리에서 해제</td></tr>
+    <tr><td><strong>기기 내 영구 저장</strong> (로컬 DB, SharedPreferences 등)</td><td><strong>AES-256-GCM</strong> 암호화 필수, Android Keystore / iOS Keychain 키 보호 권장</td></tr>
+    <tr><td><strong>서버 전송 또는 외부 저장</strong></td><td>AES-256 암호화 후 TLS 1.2 이상으로 전송, 서버 측 접근 제어 적용</td></tr>
+  </tbody>
+</table>
+<div style="background:#FFF7ED;border-left:4px solid #EA580C;padding:10px 14px;margin:12px 0;font-size:9pt;line-height:1.7;">
+  ⚠️ <strong>백업 유출 주의</strong>: 기기 내 저장 시에도 OS 백업(Android ADB Backup, iCloud Backup)을 통해 특징점이 유출될 수 있습니다.<br>
+  Android: <code>backup_rules.xml</code>로 특징점 파일 백업 제외, iOS: <code>NSFileProtectionComplete</code> 속성 적용을 권장합니다.
+</div>
+
+<h3>3.3 라이선스 검증 방식</h3>
+<ul style="margin-left:20px;margin-bottom:12px;font-size:9pt;line-height:1.8">
+  <li>앱 최초 실행 시 라이선스 서버에 1회 연결하여 유효성 검증</li>
+  <li>이후 동일 세션에서는 캐시 사용 (네트워크 불필요)</li>
+  <li><strong>오프라인 정책</strong>: 네트워크 오류 시 SDK 사용 허용. 라이선스 키 자체가 유효하지 않은 경우만 차단.</li>
+</ul>
+
+<h3>3.4 개인정보 처리</h3>
+<table>
+  <thead>
+    <tr><th>항목</th><th>처리 방식</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>지문 원본 이미지</td><td>처리 후 즉시 메모리에서 삭제, 저장 없음</td></tr>
+    <tr><td>특징점 데이터</td><td>앱이 명시적으로 저장하지 않으면 영구 보존 없음</td></tr>
+    <tr><td>서버 전송</td><td>SDK 자체는 생체 데이터를 서버로 전송하지 않음</td></tr>
+    <tr><td>사용 로그</td><td>라이선스 검증 요청만 서버에 기록 (생체 정보 미포함)</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 4 -->
+<h2><span class="num">4</span> 시스템 연동 구조</h2>
+
+<div class="arch-box">
+<pre>
+┌─────────────────────────────────┐
+│          고객사 모바일 앱         │
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │     myFinger SDK        │    │
+│  │  - 카메라 제어           │    │
+│  │  - 품질 평가             │    │
+│  │  - 특징점 추출 / 매칭    │    │
+│  └─────────────────────────┘    │
+│                                 │
+│  인증 결과(true/false) 수신      │
+│  → 고객사 백엔드 API 호출        │
+└─────────────────────────────────┘
+         ↓ 인증 결과만 전송
+┌─────────────────────────────────┐
+│         고객사 백엔드            │
+└─────────────────────────────────┘
+</pre>
+</div>
+
+<h3>등록 · 인증 흐름 요약</h3>
+<table>
+  <thead>
+    <tr><th>단계</th><th>등록 (Enrollment)</th><th>인증 (Verification)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>카메라로 지문 3회 촬영</td><td>카메라로 지문 1회 촬영</td></tr>
+    <tr><td>2</td><td>SDK가 각 촬영에서 특징점 추출</td><td>SDK가 특징점 추출</td></tr>
+    <tr><td>3</td><td>앱이 특징점(4,096 bytes × 최대 3개) 저장</td><td>저장된 특징점과 1:N 비교</td></tr>
+    <tr><td>4</td><td>—</td><td>매칭 결과(성공/실패) 반환</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 5 -->
+<h2><span class="num">5</span> SDK 공개 API 요약</h2>
+
+<h3>iOS (Swift)</h3>
+<pre><code>// 라이선스 초기화
+DiFingerSDK.shared.initialize(licenseKey:) async -> Result&lt;LicenseInfo, LicenseError&gt;
+
+// 캡처 화면 (SwiftUI Sheet)
+DiFingerCaptureView(mode: DiFingerSessionMode) { result: CaptureSessionResult in ... }
+// mode: .registration (등록) | .verification (인증)
+
+// 로컬 매칭
+DiFingerSDK.shared.match(finger1: [UInt8], finger2: [UInt8]) async -> MatchResult</code></pre>
+
+<h3>Android (Kotlin)</h3>
+<pre><code>// 라이선스 초기화
+LicenseManager.check(context, licenseKey) { result: LicenseResult -> ... }
+
+// 캡처 화면 실행 (Activity Result)
+FingerActivity.createIntent(context, isOriginFingerprint, fingerCount)
+
+// 로컬 매칭
+IzzixServiceProxy.matchMinutiae(reqFeatures, resFeatures, matchLevel): Boolean?</code></pre>
+
+<!-- Section 6 -->
+<h2><span class="num">6</span> 패키지 구성</h2>
+
+<table>
+  <thead>
+    <tr><th>파일</th><th>설명</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>DiFingerCaptureFramework.xcframework</td><td>iOS SDK 바이너리</td></tr>
+    <tr><td>DiFingerCaptureFramework.aar</td><td>Android SDK 바이너리</td></tr>
+    <tr><td>Quick Start Guide</td><td>플랫폼별 통합 가이드 (PDF)</td></tr>
+    <tr><td>API Reference</td><td>전체 공개 API 레퍼런스 (DocC / Dokka)</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 7 -->
+<h2><span class="num">7</span> 지원 및 문의</h2>
+
+<table>
+  <thead>
+    <tr><th>항목</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>라이선스 / 기술 문의</td><td>support@digentid.com</td></tr>
+    <tr><td>iOS API 레퍼런스</td><td>https://digentid.github.io/DiFingerCaptureFramework_ios/</td></tr>
+    <tr><td>Android API 레퍼런스</td><td>https://hoseon.github.io/DiFingerCaptureFramework_android/</td></tr>
+  </tbody>
+</table>
+
+<!-- Footer -->
+<div class="footer">
+  <div>
+    <span class="brand">DiGentID</span> — myFinger SDK Technical Datasheet v1.4.0
+  </div>
+  <div>
+    Copyright © 2026 DiGentID. All rights reserved.<br>
+    본 문서의 내용은 사전 예고 없이 변경될 수 있습니다.
+  </div>
+</div>
+
+</body>
+</html>
