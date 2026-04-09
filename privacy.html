@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 — myFinger | DiGentID</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f9fafb;
+      color: #1a1a2e;
+      line-height: 1.75;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .logo { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; opacity: .7; margin-bottom: 12px; }
+    header h1 { font-size: clamp(24px, 5vw, 36px); font-weight: 700; }
+    header p  { margin-top: 10px; opacity: .8; font-size: 14px; }
+
+    main {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px 80px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+      padding: 40px 48px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 600px) { .card { padding: 28px 20px; } }
+
+    .effective {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #3730a3;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    p { margin-bottom: 14px; font-size: 15px; color: #374151; }
+
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { font-size: 15px; color: #374151; margin-bottom: 8px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    th {
+      background: #f1f5f9;
+      color: #0f3460;
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid #e2e8f0;
+    }
+    td {
+      padding: 10px 14px;
+      border: 1px solid #e2e8f0;
+      color: #374151;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    .badge.warn {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+
+    .highlight {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      background: #16213e;
+      color: #9ca3af;
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 13px;
+    }
+    footer a { color: #818cf8; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DiGentID Co., Ltd.</div>
+  <h1>개인정보처리방침</h1>
+  <p>Privacy Policy — myFinger</p>
+</header>
+
+<main>
+
+  <div class="effective">
+    📅 시행일: 2026년 4월 9일 &nbsp;|&nbsp; 최종 업데이트: 2026년 4월 9일
+  </div>
+
+  <!-- 1. 개요 -->
+  <div class="card">
+    <h2>1. 개요</h2>
+    <p>
+      주식회사 디젠트아이디(이하 "회사")는 <strong>myFinger</strong> 앱(이하 "서비스")의 운영과 관련하여
+      「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 및 Google Play 정책을 준수하며,
+      이용자의 개인정보를 보호하기 위해 본 방침을 수립합니다.
+    </p>
+    <p>
+      myFinger는 <strong>카메라 기반 지문 인식 기술</strong>을 활용한 다중 인증(MFA) 솔루션입니다.
+      수집된 생체 정보는 기기 내부에만 저장되며, 외부 서버로 전송되지 않습니다.
+    </p>
+  </div>
+
+  <!-- 2. 수집 항목 -->
+  <div class="card">
+    <h2>2. 수집하는 개인정보 항목</h2>
+
+    <table>
+      <thead>
+        <tr><th>항목</th><th>수집 목적</th><th>저장 위치</th><th>보유 기간</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>지문 이미지 및 특징점 데이터</td>
+          <td>본인 인증, 지문 매칭</td>
+          <td>기기 내부 (로컬) <span class="badge">서버 미전송</span></td>
+          <td>앱 삭제 또는 사용자 초기화 시</td>
+        </tr>
+        <tr>
+          <td>카메라 영상 (실시간 프레임)</td>
+          <td>지문 감지 및 촬영</td>
+          <td>메모리 내 처리 후 즉시 폐기</td>
+          <td>촬영 완료 즉시 폐기</td>
+        </tr>
+        <tr>
+          <td>FCM 기기 토큰</td>
+          <td>MFA 인증 푸시 알림 발송</td>
+          <td>회사 서버 (암호화)</td>
+          <td>앱 탈퇴 또는 토큰 갱신 시</td>
+        </tr>
+        <tr>
+          <td>앱 사용 통계 (익명)</td>
+          <td>서비스 개선, 오류 분석</td>
+          <td>Firebase Analytics (Google)</td>
+          <td>Google 정책에 따름 (최대 14개월)</td>
+        </tr>
+        <tr>
+          <td>설정 값 (캡처 모드, 매칭 레벨 등)</td>
+          <td>사용자 환경설정 유지</td>
+          <td>기기 내부 SharedPreferences</td>
+          <td>앱 삭제 시</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      ⚠️ <strong>중요</strong>: 지문 이미지 및 특징점 데이터는 사용자의 기기 내부에만 저장됩니다.
+      회사 서버 또는 제3자에게 전송되지 않습니다.
+    </div>
+  </div>
+
+  <!-- 3. 수집 방법 -->
+  <div class="card">
+    <h2>3. 개인정보 수집 방법</h2>
+    <ul>
+      <li>앱 내 카메라를 통한 지문 이미지 직접 촬영</li>
+      <li>사용자가 앱 설정 화면에서 직접 입력한 값</li>
+      <li>앱 실행 중 Firebase SDK에 의한 익명 사용 로그 자동 수집</li>
+      <li>FCM 서비스에 의한 기기 토큰 자동 생성 및 수집</li>
+    </ul>
+  </div>
+
+  <!-- 4. 이용 목적 -->
+  <div class="card">
+    <h2>4. 개인정보 이용 목적</h2>
+    <ul>
+      <li>지문 기반 본인 인증 서비스 제공 (등록 및 검증)</li>
+      <li>다중 인증(MFA) 요청 푸시 알림 발송</li>
+      <li>앱 품질 개선 및 오류 분석 (익명 통계 활용)</li>
+      <li>관련 법령 준수</li>
+    </ul>
+    <p>수집된 개인정보는 위 목적 이외의 용도로 사용되지 않습니다.</p>
+  </div>
+
+  <!-- 5. 제3자 제공 -->
+  <div class="card">
+    <h2>5. 개인정보의 제3자 제공</h2>
+    <p>회사는 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 아래의 경우는 예외로 합니다.</p>
+    <ul>
+      <li>이용자가 사전에 동의한 경우</li>
+      <li>법령에 따라 수사기관의 요청이 있는 경우</li>
+    </ul>
+
+    <h2 style="margin-top:28px;">6. 외부 서비스 제공자 (위탁)</h2>
+    <table>
+      <thead>
+        <tr><th>제공자</th><th>제공 항목</th><th>목적</th><th>개인정보처리방침</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google LLC (Firebase)</td>
+          <td>익명 사용 통계, FCM 기기 토큰</td>
+          <td>분석, 푸시 알림</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6. 보유 및 파기 -->
+  <div class="card">
+    <h2>7. 개인정보 보유 및 파기</h2>
+    <p>
+      개인정보는 수집·이용 목적이 달성된 후 지체 없이 파기합니다.
+      전자적 파일 형태는 복구 불가능한 방법으로 영구 삭제하며, 출력물은 분쇄 또는 소각합니다.
+    </p>
+    <ul>
+      <li><strong>지문 데이터</strong>: 사용자가 앱 내 '초기화' 기능 사용 또는 앱 삭제 시 즉시 삭제</li>
+      <li><strong>FCM 토큰</strong>: 앱 탈퇴 요청 또는 토큰 갱신 시 서버에서 삭제</li>
+      <li><strong>익명 통계</strong>: Google 정책에 따름 (최대 14개월)</li>
+    </ul>
+  </div>
+
+  <!-- 7. 권한 -->
+  <div class="card">
+    <h2>8. 앱 접근 권한 안내</h2>
+    <table>
+      <thead>
+        <tr><th>권한</th><th>목적</th><th>필수 여부</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>카메라 (CAMERA)</td>
+          <td>지문 이미지 촬영</td>
+          <td><span class="badge">필수</span></td>
+        </tr>
+        <tr>
+          <td>알림 (POST_NOTIFICATIONS)</td>
+          <td>MFA 인증 요청 알림 수신</td>
+          <td><span class="badge warn">선택</span></td>
+        </tr>
+        <tr>
+          <td>인터넷 (INTERNET)</td>
+          <td>FCM 토큰 등록 및 MFA 결과 전송</td>
+          <td><span class="badge">필수</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>선택 권한을 허용하지 않아도 핵심 지문 촬영 기능을 사용할 수 있습니다.</p>
+  </div>
+
+  <!-- 8. 이용자 권리 -->
+  <div class="card">
+    <h2>9. 이용자의 권리</h2>
+    <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li><strong>조회·수정</strong>: 앱 설정 화면에서 저장된 데이터 확인</li>
+      <li><strong>삭제·철회</strong>: 앱 내 '초기화' 기능 또는 앱 삭제를 통해 즉시 삭제</li>
+      <li><strong>처리 정지</strong>: 아래 연락처로 요청</li>
+    </ul>
+  </div>
+
+  <!-- 9. 아동 -->
+  <div class="card">
+    <h2>10. 만 14세 미만 아동의 개인정보</h2>
+    <p>
+      본 서비스는 만 14세 미만의 아동을 대상으로 하지 않습니다.
+      만 14세 미만 아동이 개인정보를 제공한 경우, 보호자는 아래 연락처로 삭제를 요청할 수 있습니다.
+    </p>
+  </div>
+
+  <!-- 10. 보안 -->
+  <div class="card">
+    <h2>11. 개인정보 보호를 위한 기술적 조치</h2>
+    <ul>
+      <li>지문 특징점 데이터는 기기 내부 저장소에 암호화 저장</li>
+      <li>서버 통신 구간 TLS 1.2 이상 적용</li>
+      <li>FCM 토큰 서버 저장 시 암호화</li>
+      <li>앱 코드 난독화(ProGuard/R8) 적용</li>
+    </ul>
+  </div>
+
+  <!-- 11. 변경 -->
+  <div class="card">
+    <h2>12. 개인정보처리방침 변경</h2>
+    <p>
+      본 방침은 법령·서비스 변경에 따라 개정될 수 있으며, 변경 시 앱 내 공지 또는 본 페이지를 통해 사전 안내합니다.
+    </p>
+  </div>
+
+  <!-- 12. 연락처 -->
+  <div class="card">
+    <h2>13. 개인정보 보호 담당자 및 연락처</h2>
+    <table>
+      <tbody>
+        <tr><th style="width:180px;">회사명</th><td>주식회사 디젠트아이디 (DiGentID Co., Ltd.)</td></tr>
+        <tr><th>담당자</th><td>개인정보 보호 담당팀</td></tr>
+        <tr><th>이메일</th><td><a href="mailto:support@digentid.com">support@digentid.com</a></td></tr>
+        <tr><th>소재지</th><td>대한민국</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px; font-size:14px; color:#6b7280;">
+      개인정보 관련 불만이나 침해 신고는
+      <a href="https://www.privacy.go.kr" target="_blank">개인정보보호위원회</a> 또는
+      <a href="https://www.kopico.go.kr" target="_blank">한국인터넷진흥원(KISA)</a>에 문의하실 수 있습니다.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 DiGentID Co., Ltd. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="mailto:support@digentid.com">support@digentid.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
