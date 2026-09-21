@@ -45,7 +45,7 @@
                     </a>
             </div>
             <div class="library-version">
-1.0.0            </div>
+1.5.2            </div>
         </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/release">androidJvm</button>
@@ -65,7 +65,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">DiFingerCapture</a><span class="delimiter">/</span><a href="../index.html">com.digentid.difingercapture.service</a><span class="delimiter">/</span><span class="current">IzzixRemoteService</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Izzix</span><wbr></wbr><span>Remote</span><wbr></wbr><span><span>Service</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">IzzixRemoteService</a> : <a href="https://developer.android.com/reference/kotlin/android/app/Service.html">Service</a></div><p class="paragraph">IzzixFCI 네이티브 엔진을 별도 프로세스(:izzix)에서 실행하는 서비스.</p><p class="paragraph">목적: IzzixFCI JNI가 힙 메타데이터를 손상시키므로(Scudo SIGABRT), 별도 프로세스로 격리하여 메인 앱의 TFLite/GPU 등에 영향을 주지 않도록 함.</p><p class="paragraph">이 서비스 프로세스가 크래시되더라도 메인 앱은 영향 없이 자동 재연결.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">IzzixRemoteService</a> : <a href="https://developer.android.com/reference/kotlin/android/app/Service.html">Service</a></div><p class="paragraph">IzzixFCI 네이티브 엔진을 별도 프로세스(:izzix)에서 실행하는 서비스.</p><p class="paragraph">목적: IzzixFCI JNI가 힙 메타데이터를 손상시키므로(Scudo SIGABRT), 별도 프로세스로 격리하여 메인 앱의 TFLite/GPU 등에 영향을 주지 않도록 함.</p><p class="paragraph">이 서비스 프로세스가 크래시되더라도 메인 앱은 영향 없이 자동 재연결.</p><p class="paragraph">엔진 호출 직후 항상 izzixLite_GetLastDiag(int30)를 조회해 결과 Parcelable(code/reason/diag)에 싣는다. null 대신 코드가 실린 결과를 반환 — 서비스 단 입력 null은 엔진 기존 코드 -402(IMAGE_NULL) 재사용.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>

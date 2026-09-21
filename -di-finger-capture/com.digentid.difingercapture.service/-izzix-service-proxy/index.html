@@ -45,7 +45,7 @@
                     </a>
             </div>
             <div class="library-version">
-1.0.0            </div>
+1.5.2            </div>
         </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/release">androidJvm</button>
@@ -65,7 +65,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">DiFingerCapture</a><span class="delimiter">/</span><a href="../index.html">com.digentid.difingercapture.service</a><span class="delimiter">/</span><span class="current">IzzixServiceProxy</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Izzix</span><wbr></wbr><span>Service</span><wbr></wbr><span><span>Proxy</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">IzzixServiceProxy</a></div><p class="paragraph">IzzixRemoteService(:izzix 프로세스)와 AIDL 통신하는 프록시.</p><p class="paragraph">기존 IzzixService.instance.method() 호출을 IzzixServiceProxy.instance.method()로 교체하면 자동으로 별도 프로세스에서 JNI 실행.</p><ul><li><p class="paragraph">서비스 연결 대기 (최대 5초)</p></li><li><p class="paragraph">서비스 프로세스 크래시 시 자동 재연결</p></li><li><p class="paragraph">RemoteException 발생 시 1회 재시도</p></li><li><p class="paragraph">drawMinutiaeOverlay는 IPC 없이 로컬 실행 (순수 Kotlin)</p></li></ul></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">IzzixServiceProxy</a></div><p class="paragraph">IzzixRemoteService(:izzix 프로세스)와 AIDL 통신하는 프록시.</p><p class="paragraph">기존 IzzixService.instance.method() 호출을 IzzixServiceProxy.instance.method()로 교체하면 자동으로 별도 프로세스에서 JNI 실행.</p><ul><li><p class="paragraph">서비스 연결 대기 (최대 5초)</p></li><li><p class="paragraph">서비스 프로세스 크래시 시 자동 재연결</p></li><li><p class="paragraph">RemoteException 발생 시 1회 재시도</p></li><li><p class="paragraph">drawMinutiaeOverlay는 IPC 없이 로컬 실행 (순수 Kotlin)</p></li></ul><p class="paragraph">프록시 자체(bindService 실패, awaitService 타임아웃, RemoteException 재시도까지 실패)에서 나는 오류는 엔진 코드가 아니므로 앱 전용 코드 -950/-951/-952(SERVICE_UNAVAILABLE/TIMEOUT/IPC_ERROR)를 합성해 반환한다. 더 이상 null을 반환하지 않는다 — 호출부는 항상 code 필드로 성공/실패를 판정한다.</p><p class="paragraph"><a href="../../com.digentid.difingercapture/-license-manager/is-ready.html">LicenseManager.isReady</a>가 false(미검증·만료·무효)이면 엔진 호출 자체를 시도하지 않고 코드 -953(LICENSE_NOT_READY)을 합성해 반환한다 — 라이선스 없이 매칭 API를 쓰는 경로 차단.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -83,6 +83,40 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1802483345%2FProperties%2F492899073" anchor-label="lastCode" id="-1802483345%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-code.html"><span>last</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1802483345%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-volatile/index.html"><span class="token annotation builtin">Volatile</span></a></div></div><span class="token keyword">var </span><a href="last-code.html">lastCode</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">마지막으로 관측된 실패 코드(0=정상).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1891202481%2FProperties%2F492899073" anchor-label="lastDiag" id="1891202481%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-diag.html"><span>last</span><wbr></wbr><span><span>Diag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1891202481%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.jvm/-volatile/index.html"><span class="token annotation builtin">Volatile</span></a></div></div><span class="token keyword">var </span><a href="last-diag.html">lastDiag</a><span class="token operator">: </span><a href="../../com.digentid.difingercapture.engine/-izzix-diag/index.html">IzzixDiag</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">마지막 실패 시점의 진단 정보. 실패가 프록시/서비스 레벨(코드 -950~-952)이면 null.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -116,7 +150,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="extract-minutiae.html"><span class="token function">extractMinutiae</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bitmap<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Bitmap.html">Bitmap</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">500</span><span class="token punctuation">, </span></span><span class="parameter ">colorInversion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">withThinned<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-extract-result/index.html">ExtractResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">지문 비트맵에서 특징점을 추출합니다.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="extract-minutiae.html"><span class="token function">extractMinutiae</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bitmap<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Bitmap.html">Bitmap</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">500</span><span class="token punctuation">, </span></span><span class="parameter ">colorInversion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">withThinned<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-extract-result/index.html">ExtractResult</a></div><div class="brief "><p class="paragraph">지문 비트맵에서 특징점을 추출합니다.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -131,7 +165,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-minutiae.html"><span class="token function">getMinutiae</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">features<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">minutiaCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-minutia-point/index.html">MinutiaPoint</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">특징점 벡터에서 개별 특징점(<a href="../-minutia-point/index.html">MinutiaPoint</a>) 목록을 복원합니다.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-minutiae.html"><span class="token function">getMinutiae</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">features<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">minutiaCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-minutiae-result/index.html">MinutiaeResult</a></div><div class="brief "><p class="paragraph">특징점 벡터에서 개별 특징점(<a href="../-minutia-point/index.html">MinutiaPoint</a>) 목록을 복원합니다.</p></div></div></div>
                 </div>
               </div>
             </div>
